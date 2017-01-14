@@ -1,6 +1,7 @@
 #Elasticsplunk
 
 Elasticsplunk is a splunk custom command for querying elasticsearch.
+![preview of elasticsearch command in splunk](/preview.png)
 
 ## What do I do with these files?
 ### Splunk Files
