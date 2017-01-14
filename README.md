@@ -122,3 +122,7 @@ I run elasticsearch in docker to make my life easier.  When I get junk data in t
 ```
 ~$ docker run -p 9200:9200 elasticsearch
 ```
+
+## References
+https://www.elastic.co/guide/en/elasticsearch/reference/current/search-uri-request.html
+https://hub.docker.com/_/elasticsearch/
