@@ -10,3 +10,7 @@ python ./write_elasticsearch.py --index other --sourcetype messages '{"message":
 python ./write_elasticsearch.py --index other --sourcetype messages '{"datetime":"2017-01-01 00:00:00","message":"much indexing", "comment": "holy cow"}'
 python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"2017-01-02 00:00:00","message":"more indexing", "comment": "holy moly"}'
 python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"1483423200","message":"much more indexing", "comment": "holy moly rolly"}'
+python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"1483426200","message":"much much more indexing", "comment": "holy rolly"}'
+python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"1483429200","message":"less more indexing", "comment": "moly rolly"}'
+python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"1483429200","message":"less more indexing", "comment": "holy rolly"}'
+python ./write_elasticsearch.py --index other --sourcetype messages '{"_time":"1483430900","message":"much less indexing", "comment": "rolly moly"}'

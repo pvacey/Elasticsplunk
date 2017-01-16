@@ -21,14 +21,18 @@ response = requests.get(url)
 r = json.loads(response.text)
 
 if response.status_code == 200:
-    tmp = r['hits']['hits']
+    thing = r['hits']['hits']
     results = []
-    for row in tmp:
-#	print row
- #       print json.dumps(row['_source'])
-	results.append({'_raw': json.dumps(row['_source']),
-		        'host': args.server,
-			'sourcetype': row['_type'],
-			'index': row['_index']})
+    for row in thing:
+	tmp = {}
+	tmp['_raw'] = json.dumps(row['_source'])
+	tmp['host'] = args.server
+	tmp['sourcetype'] = row['_type']
+	tmp['index'] = row['_index']
+	# add each field to the results
+        for key in row['_source'].keys():
+	   tmp[key] = row['_source'][key] 
+
+	results.append(tmp)
 
 splunk.Intersplunk.outputResults(results)
