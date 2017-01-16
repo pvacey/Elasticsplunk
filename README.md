@@ -5,9 +5,7 @@ Elasticsplunk is a splunk custom command for querying elasticsearch.
 ![preview of elasticsearch command in splunk](/preview.png)
 
 ## What do I do with these files?
-### Splunk Files
-- `splunk_elasticsearch.py` - custom command for splunk, this belongs in `$SPLUNK_HOME/etc/apps/<your_app>/bin/`
-- `commands.conf` - commands conf stanza, add this in `$SPLUNK_HOME/etc/apps/<your_app>/local/command.conf`
+- clone this repo into `$SPLUNK_HOME/etc/apps/`
 
 ### Testing Tools
 - `write_elasticsearch.py`- cli tool for writing data to elasticsearch
@@ -34,10 +32,6 @@ results
 via splunk command
 ```
 | elasticsearch --index=test --sourcetype=mydata "message:hello"
-```
-use spath to parse json output
-```
-| elasticsearch --index=test "*" | spath | stats values(message) by author
 ```
 via CLI tool
 ```
