@@ -1,0 +1,14 @@
+[app/ui]
+version = 6.5.1
+modtime = 1484440273.435269000
+
+[app/launcher]
+version = 6.5.1
+modtime = 1484440273.440778000
+
+[commands/elasticsearch]
+access = read : [ * ], write : [ admin, power ]
+export = system
+owner = nobody
+version = 6.5.1
+modtime = 1484440895.460946000
