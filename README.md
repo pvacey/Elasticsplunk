@@ -35,6 +35,10 @@ via splunk command
 ```
 | elasticsearch --index=test --sourcetype=mydata "message:hello"
 ```
+use spath to parse json output
+```
+| elasticsearch --index=test "*" | spath | stats values(message) by author
+```
 via CLI tool
 ```
 ~$./query_elasticsearch.py --index=test --sourcetype=mydata "message:hello"
@@ -75,7 +79,7 @@ do `--help` or `-h` for more usage information
 usage: query_elasticsearch.py [-h] [--server SERVER] [--index INDEX]
                               [--sourcetype STYPE]
                               query
-                              
+
 Query Elasticsearch.
 
 positional arguments:
